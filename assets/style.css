@@ -50,11 +50,13 @@ h1 span {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
+/*On hover effects*/
 .box:hover h1 span {
 	color: #262626;
 	background: rgba(255,255,255,.8);
-	letter-spacing: 10px;
+	letter-spacing: 7px;
 	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	border-radius: 12%;
 }
 .box:hover h1{
 	background: rgba(0,0,0,0);
@@ -63,20 +65,31 @@ h1 span {
 	width: 35vw;
 }
 
+/*media query*/
 @media screen and (max-width:640px) {
-	.box {
-		width: 100%
+	/*change of direction*/
+	.container {
+		flex-direction: column;
+	}
+	h1 {
+	line-height: 21vh;
+	background-position: cover;
+	font-size: 1.7em;
+	}
+	.container .box {
+		width: 100vw;
+	}
+	/*end of change of direction*/
+	h1 span {
+		letter-spacing: 1.7px;
+	}
+	
+	/*hover effect*/
+	.box:hover {
+		height: 45vw;
 	}
 	.box:hover h1 span {
-		color: #262626;
-		background: rgba(255,255,255,.8);
-		letter-spacing: 10px;
-		box-shadow: 0 5px 15px rgba(0,0,0,.5);
-	}
-	.box:hover h1{
-		background: rgba(0,0,0,0);
-	}
-	.box:hover {
-		width: 15vw;
-	}
+		background: rgba(255,255,255,.6);
+		border-radius: 12%;
+		letter-spacing: 6px;
 }
